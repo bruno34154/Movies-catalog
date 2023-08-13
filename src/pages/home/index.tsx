@@ -31,7 +31,6 @@ export default function Home() {
         setError(false);
       })
       .catch(() => {
-        console.log("erro");
         setError(true);
       });
   }, [api_key]);
