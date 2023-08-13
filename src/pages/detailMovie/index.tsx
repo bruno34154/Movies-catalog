@@ -29,7 +29,7 @@ export default function DetailMovie(){
             
             <a href="/" title="voltar a pagina inicial" className="hover:scale-125 duration-75 text-white"><AiOutlineHome size={40} className="hover:scale-125 duration-75" /></a>
             <h1 className='text-white text-center text-xl'>{movie.title}</h1>
-            <div className='flex p-5'>
+            <div className='flex p-5 sm:flex-col'>
                 <div ><CardMovie id={movie.id} image={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} title={movie.title} /></div>
                 <div className='text-white  ml-5  flex flex-col'>
                     <div className='text-white text-center ml-5 mt-20 flex '><AiFillStar className='mr-2' size={30}/> Media de votos: {movie.vote_average} </div>
