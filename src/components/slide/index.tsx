@@ -3,7 +3,6 @@ import { useState } from 'react';
 
 export default function Slide(props: any){
     const [cont, setCont] = useState(0)
-
     const previousImage = ()=>{
         cont === 0? setCont(props.image.length - 1): setCont(cont-1); 
     }
@@ -12,7 +11,7 @@ export default function Slide(props: any){
         cont === props.image.length - 1? setCont(0): setCont(cont+1)
     }
     return(
-        <div className="max-w-[1800px] h-[200px] w-full m-auto  relative group">
+        <div className="max-w-[1400px] h-[400px] w-full m-auto  relative group">
             <div style={{backgroundImage: `url(${props.image[cont].url})`}} className="w-full h-full rounded-2xl bg-center bg-cover duration-500" >
             </div>
 
