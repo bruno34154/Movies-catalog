@@ -11,6 +11,7 @@ interface Movie  {
     title: String;
     poster_path:string;
     id: string;
+    backdrop_path: string;
 }
 
 export default function Home(){
@@ -45,7 +46,7 @@ export default function Home(){
     ];
     return(
         <div className="m-0 p-0  h-full ">
-            <Slide image={images}/>
+            <Slide image={images} movie={movies}/>
            <div className="flex justify-center"><div className="w-1/2"><InputText title="pesquise por um filme aqui" id="1" name="search" type="text" onChange={handleInput} onKeyDown={handleDown}/></div></div>
            <div className="flex flex-wrap">
             {
