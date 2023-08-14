@@ -28,6 +28,7 @@ export default function DetailMovie() {
     .toLocaleString("pt-BR")
     .split(",");
   useEffect(() => {
+    
     axios
       .get(
         `https://api.themoviedb.org/3/movie/${id}?api_key=${api_key}&language=pt-BR`
@@ -40,7 +41,8 @@ export default function DetailMovie() {
       .catch(() => {
         setError(true);
       });
-  }, [api_key, id]);
+      document.title = `${movie.title}`;
+  }, [api_key, id, movie.title]);
   return (
     <div>
       {error ? (

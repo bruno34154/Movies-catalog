@@ -20,6 +20,7 @@ export default function Home() {
   const [error, setError] = useState<Boolean>(false);
   useEffect(() => {
     // recebe os dados da api
+    document.title = 'Catalogo de filmes';
     axios
       .get(
         `https://api.themoviedb.org/3/movie/popular?api_key=${api_key}&language=pt-BR`
