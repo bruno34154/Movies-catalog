@@ -79,6 +79,7 @@ export default function Home() {
               image={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
               title={movie.title}
               link={true}
+              key={movie.id}
             />
           ))}
         </div>
